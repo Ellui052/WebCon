@@ -1,0 +1,97 @@
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@500&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Noto Sans KR", sans-serif;
+}
+
+.BrandBar {
+  display: flex;
+  justify-content: space-between;
+}
+
+.BrandBar_logo img {
+  width: 18%;
+  margin: 5%;
+}
+
+.BrandBar_right {
+  display: flex;
+  align-items: center;
+}
+
+.BrandBar_right img {
+  width: 30px;
+  margin-right: 20px;
+}
+
+.subBar {
+  border-bottom: 1px solid #808080;
+  padding: 5%;
+}
+
+.subBar ul {
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+}
+
+.subBar li {
+  float: left;
+  margin-left: 5%;
+  margin-right: 5%;
+}
+
+.subBar a {
+  text-decoration: none;
+  color: #808080;
+}
+
+.sorts ul {
+  list-style: none;
+  padding: 20px;
+}
+
+.sorts li {
+  float: left;
+  margin-left: 5%;
+  font-size: 12px;
+  color: #808080;
+}
+
+.week {
+  display: flex;
+  justify-content: center;
+  margin-top: 6%;
+}
+
+.week ul {
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+  width: 80%;
+}
+
+.week li {
+  font-size: 18px;
+  float: left;
+  color: #808080;
+}
+
+.contents {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  width: 98%;
+  margin: 0 auto;
+  margin-top: 5%;
+}
+
+.content {
+  width: 32%;
+  height: 180px;
+  background-color: #808080;
+  border-radius: 10px;
+  margin: 1px;
+}
