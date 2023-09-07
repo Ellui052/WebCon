@@ -20,6 +20,9 @@
 .write div input {
   width: 80%;
   padding: 10px;
+  background-color: #303030;
+  border: none;
+  border-radius: 3px;
 }
 
 .main_index input {
