@@ -32,6 +32,10 @@
   display: inline-block;
 }
 
+.notice_content a {
+  text-decoration: none;
+}
+
 .notice_content label {
   margin-left: 10px;
   color: #808080;
