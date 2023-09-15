@@ -1,0 +1,40 @@
+* {
+  outline: none;
+  color: #808080;
+}
+
+.write {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-top: 30px;
+}
+
+.write div {
+  width: 90%;
+  margin-bottom: 10px;
+  display: flex;
+  justify-content: center;
+}
+
+.write div input {
+  width: 80%;
+  padding: 10px;
+  background-color: #303030;
+  border: none;
+  border-radius: 3px;
+}
+
+.main_index input {
+  height: 250px;
+}
+
+.btn {
+  text-align: center;
+}
+
+.btn a {
+  margin: 40px;
+  text-decoration: none;
+  font-size: 16px;
+}
