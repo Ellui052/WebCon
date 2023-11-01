@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="kr" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>웹콘 - 검색</title>
+    <style>
+        @import url("https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@500&display=swap");
+
+        body {
+            background-color: #121212;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            font-family: "Noto Sans KR", sans-serif;
+        }
+
+        .main {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        .BrandBar {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .BrandBar_logo img {
+            width: 16%;
+            margin: 5%;
+        }
+
+        .BrandBar_right {
+            display: flex;
+            align-items: center;
+        }
+
+        .BrandBar_right img {
+            width: 25px;
+            margin-right: 20px;
+        }
+
+        .search {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-top: 10px;
+            width: 80%;
+        }
+
+        .search input {
+            border-radius: 10px;
+            padding: 10px;
+            width: 100%;
+            border: none;
+            background-color: #303030;
+            color: #808080;
+            outline: none;
+        }
+
+        .search img {
+            width: 40px;
+        }
+
+        .contents {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            width: 98%;
+            margin: 0 auto;
+            margin-top: 5%;
+            margin-bottom: 5%;
+        }
+
+        .content {
+            width: 32%;
+            margin: 2px;
+        }
+
+        .content img {
+            width: 100%;
+            border-radius: 5px;
+            height: 180px;
+        }
+
+        @media(min-width: 500px) {
+            .main {
+                width: 500px;
+                margin-left: 50%;
+                transform: translateX(-50%);
+            }
+
+            .content img {
+                height: 230px;
+            }
+        }
+
+        @media(min-width: 600px) {
+            .main {
+                width: 600px;
+                margin-left: 50%;
+                transform: translateX(-50%);
+            }
+
+            .content {
+                width: 24%;
+            }
+
+            .content img {
+                height: 200px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="main">
+        <form theach="@{/webcon/search}" method="get" class="search">
+            <input type="text" placeholder="작가,작품,장르 검색" name="search">
+            <a href="/webcon/main"><img src="https://i.ibb.co/pwwrSWB/x-white.png" alt="back"></a>
+        </form>
+        <div class="contents">
+            <a th:each="webtoon : ${list}" th:href="@{/webcon/info?(num=${webtoon.num})}" class="content">
+                <img th:src="${webtoon.img}">
+            </a>
+        </div>
+    </div>
+</body>
+
+</html>
